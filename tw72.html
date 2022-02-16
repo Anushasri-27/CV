@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px auto;
+            width: 80vw;
+        }
+
+        .formstyle {
+            row-gap: 20px;
+
+        }
+
+        fieldset {
+            margin: 0px auto;
+        }
+
+        input {
+            width: 50vw;
+            margin: 5px 5px;
+            padding: 10px 10px;
+        }
+
+        input[type=radio] {
+            width: 20px;
+        }
+
+        #btn1 {
+            width: 138px;
+            height: 55px;
+            font-size: 22px;
+            font-variant: all-small-caps;
+            background: bisque;
+            border: 6px tomato;
+            border-style: solid;
+            position: relative;
+            top: 93px;
+            left: 947px;
+        }
+
+        #btn1:hover {
+            width: 140px;
+            height: 57px;
+            font-size: 23px;
+            font-variant: all-small-caps;
+            background: rgba(235, 179, 112, 0.76);
+            border: 6px rgba(250, 126, 105, 0.623);
+            color: white;
+        }
+
+        #btn-2 {
+            width: 138px;
+            height: 55px;
+            font-size: 22px;
+            font-variant: all-small-caps;
+            background: bisque;
+            border: 6px tomato;
+            border-style: solid;
+            position: relative;
+            top: -201px;
+            left: 947px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> INPUT DATA DOCTOR AND ROOMS/WARDS </h1>
+    <form name="form" action="tw7action_doctor.php" method="post" class="formstyle">
+        <button type="submit" value="submit" id="btn1" name="submit">submit</button>
+        <fieldset>
+            <legend>ENTER DETAIL FOR DOCTOR</legend>
+            <input type="text" name="ID" placeholder="ENTER ID"> <BR>
+            <input type="text" name="name" placeholder="ENTER NAME"><BR>
+            <input type="radio" name="Specialization" value="PHYSICIAN"> PHYSICIAN
+            <input type="radio" name="Specialization" value="SURGEON"> SURGEON
+            <input type="radio" name="Specialization" value="DENTIST"> DENTIST <BR>
+            <input type="date" name="DOJ" placeholder="ENTER THE DATE OF JOINING"> <BR>
+            <input type="text" name="texp" placeholder="TOTAL EXPERIENCE"> <BR>
+            <input type="date" name="age" placeholder="ENTER AGE"><BR>
+            <input type="tel" name="con_num" placeholder="ENTER CONTACT NUMBER"><BR>
+        </fieldset>
+    </form>
+    <form name="form2" method="get" action="tw7action_room.php">
+        <fieldset>
+            <legend>ENTER DETAIL FOR ROOMS AND WARDS</legend>
+            <input type="text" name="tr" placeholder="ENTER TYPE OF ROOM/WARD"> <BR>
+            <input type="number" name="nb" placeholder="ENTER NUMBER OD BEDS"><BR>
+            <input type="number" name="charges" placeholder="ENTER RATE PER DAY"> <BR>
+            <input type="number" name="np" placeholder="ENTER NUMBER OF PATEINTS"> <BR>
+        </fieldset>
+        <button id="btn-2" type="submit" value="submit" name="submit">submit</button>
+    </form>
+
+</body>
+
+</html>
